@@ -68,3 +68,4 @@ Please review [our security policy](https://github.com/akaunting/akaunting/secur
 
 Akaunting is released under the [BSL license](LICENSE.txt).
 # finance-ledger
+# finance-ledger
