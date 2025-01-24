@@ -1,8 +1,8 @@
 name: Translations
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  # schedule:
+  #   - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,8 +15,6 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v2
-
-    - name: Sync with Crowdin
       uses: crowdin/github-action@master
       with:
         upload_sources: true
@@ -28,12 +26,12 @@ jobs:
         translation: 'resources/lang/%locale%/%original_file_name%'
 
         localization_branch_name: 'translations'
-        commit_message: 'new crowdin translations'
-        pull_request_title: 'New Crowdin translations'
-        pull_request_body: 'https://crowdin.com/project/akaunting'
+        commit_message: 'New translations'
+        pull_request_title: 'New translations'
+        pull_request_body: 'https://google.com'
         pull_request_labels: 'Translation'
-        
-        project_id: ${{ secrets.CROWDIN_CORE_ID }}
-        token: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+        project_id: ''
+        token: ''
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ '' }}
